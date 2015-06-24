@@ -5,6 +5,6 @@ window.Tree = Tree;
 window.TreeNode = TreeNode;
 
 export default {
-	Tree: Tree,
+    Tree: Tree,
     TreeNode: TreeNode
 }
