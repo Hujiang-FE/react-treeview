@@ -1,5 +1,4 @@
 # react-treeview
----
 
 An implement of treeview component with react.js
 
