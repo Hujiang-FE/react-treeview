@@ -304,10 +304,6 @@
 	        return React.createElement('span', props);
 	    },
 
-	    renderNodes: function renderNodes() {
-	        return this.renderChildren(this.props.treeProps, this.state.expanded);
-	    },
-
 	    render: function render() {
 	        var nodeContent = undefined,
 	            element = undefined,
@@ -336,7 +332,7 @@
 	            this.props.text
 	        );
 
-	        childs = this.renderNodes();
+	        childs = this.renderChildren(this.props.treeProps, this.state.expanded);
 
 	        return React.createElement(
 	            'li',
@@ -389,7 +385,7 @@
 
 /***/ },
 /* 3 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -398,6 +394,12 @@
 	});
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	var _treenode = __webpack_require__(2);
+
+	var _treenode2 = _interopRequireDefault(_treenode);
 
 	var nodeCollectionMixin = {
 
@@ -410,7 +412,7 @@
 			if (nodes) {
 				children = [];
 				nodes.forEach(function (node) {
-					children.push(React.createElement(TreeNode, _extends({}, node, {
+					children.push(React.createElement(_treenode2['default'], _extends({}, node, {
 						level: self.props.level + 1,
 						treeProps: treeProps,
 						listenFromParent: self.checkChildrenCheckedState,

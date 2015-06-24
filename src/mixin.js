@@ -1,13 +1,15 @@
+ import TreeNode from './treenode';
+
 var nodeCollectionMixin = {
 
-	renderChildren: function(treeProps, visibility){
+	renderChildren(treeProps, visibility){
 		let self = this,
 	       nodes = this.props.nodes,
 	       children, props;
 
 	    if (nodes) {
 	      children = [];
-	      nodes.forEach(function (node) {
+	      nodes.forEach((node) => {
 	        children.push(<TreeNode {...node}
 	                      level={ self.props.level + 1 }
 	                      treeProps = {treeProps}
