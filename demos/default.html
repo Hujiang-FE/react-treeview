@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <script src="../vendor/jquery.min.js"></script>
     <script src="../vendor/react.js"></script>
     <script src="../dist/treeview.js"></script>
     <script src="../vendor/JSXTransformer.js"></script>
-    <link rel="stylesheet" type="text/css" href="../src/react-treeview.css">
-  </head>
-  <body>
-  <script type="text/jsx">
-  var onNodeChecked = function(state){
-    console.log(state);
-  }
+</head>
+<body>
+<script type="text/jsx">
 
-  var tree = (<Tree nodeChecked={onNodeChecked} autoCheckNodes={true}>
-      <TreeNode text="Movies">
-        <TreeNode text="The Shawshank Redemption"/>
-        <TreeNode text="The Godfather" />
-        <TreeNode text="The Dark Knight" />
-      </TreeNode>
-      <TreeNode text="Books">
-        <TreeNode text="Harry Potter I" />
-        <TreeNode text="古典">
-          <TreeNode text="三国演义" />
-          <TreeNode text="红楼梦" />
-        </TreeNode>     
-      </TreeNode>
-      <TreeNode text="Music">
-        <TreeNode text="命运交响曲" />
-        <TreeNode text="The Beatles">
-          <TreeNode text="Yesterday">
-            <TreeNode text="Paul" />
-            <TreeNode text="John" />
-          </TreeNode>
-          <TreeNode text="Hey Jude" />
-          <TreeNode text="........" />
+    var Tree = ReactTree.Tree;
+    var TreeNode = ReactTree.TreeNode;
+
+    var onNodeChecked = function (state) {
+        console.log(state);
+    }
+
+    var tree = (<Tree nodeChecked={onNodeChecked} autoCheckNodes={true}>
+        <TreeNode text="Movies">
+            <TreeNode text="The Shawshank Redemption"/>
+            <TreeNode text="The Godfather"/>
+            <TreeNode text="The Dark Knight"/>
         </TreeNode>
-        <TreeNode text="Can\'t take my eyes off you!" />
-      </TreeNode>
-      <TreeNode text="Apple watch (Edition)" />
+        <TreeNode text="Books">
+            <TreeNode text="Harry Potter I"/>
+            <TreeNode text="古典">
+                <TreeNode text="三国演义"/>
+                <TreeNode text="红楼梦"/>
+            </TreeNode>
+        </TreeNode>
+        <TreeNode text="Music">
+            <TreeNode text="命运交响曲"/>
+            <TreeNode text="The Beatles">
+                <TreeNode text="Yesterday">
+                    <TreeNode text="Paul"/>
+                    <TreeNode text="John"/>
+                </TreeNode>
+                <TreeNode text="Hey Jude"/>
+                <TreeNode text="........"/>
+            </TreeNode>
+            <TreeNode text="Can\'t take my eyes off you!"/>
+        </TreeNode>
+        <TreeNode text="Apple watch (Edition)"/>
     </Tree>)
 
     React.render(
-      tree, 
-      document.querySelector('body'));
-  </script>
-  </body>
+            tree,
+            document.querySelector('body'));
+</script>
+</body>
 </html>

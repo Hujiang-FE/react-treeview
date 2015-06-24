@@ -1,132 +1,134 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <script src="../vendor/jquery.min.js"></script>
     <script src="../vendor/react.js"></script>
     <script src="../dist/treeview.js"></script>
     <script src="../vendor/JSXTransformer.js"></script>
-    <link rel="stylesheet" type="text/css" href="../src/react-treeview.css">
-  </head>
-  <body>
-    <script type="text/jsx">
+</head>
+<body>
+<script type="text/jsx">
+
+    var Tree = ReactTree.Tree;
+    var TreeNode = ReactTree.TreeNode;
 
     var nodes = [
         {
-            text:'Movies',
-            value:'Movies',
-            expanded:true,
-            nodes:[
+            text: 'Movies',
+            value: 'Movies',
+            expanded: true,
+            nodes: [
                 {
-                    text:'The Shawshank Redemption',
-                    value:'The Shawshank Redemption',
+                    text: 'The Shawshank Redemption',
+                    value: 'The Shawshank Redemption',
                     checked: 'checked',
-                    nodes:[]
+                    nodes: []
                 },
                 {
-                    text:'The Godfather',
-                    value:'The Godfather',
-                    nodes:[]
+                    text: 'The Godfather',
+                    value: 'The Godfather',
+                    nodes: []
                 },
                 {
-                    text:'The Dark Knight',
-                    value:'The Dark Knight',
-                    nodes:[]
+                    text: 'The Dark Knight',
+                    value: 'The Dark Knight',
+                    nodes: []
                 },
                 {
-                    text:'建国大业',
-                    value:'The Dark Knight',
-                    nodes:[]
+                    text: '建国大业',
+                    value: 'The Dark Knight',
+                    nodes: []
                 }
             ]
         }
-        ,{
-            text:'Books',
-            value:'Books',
-            nodes:[
-            {
-                text:'Harry Potter I',
-                value:'',
-                nodes:[]
-            },
-            {
-                text:'Harry Potter ',
-                value:''
-            },
-            {
-                text:'古典',
-                value:'',
-                nodes:[
+        , {
+            text: 'Books',
+            value: 'Books',
+            nodes: [
                 {
-                    text:'三国演义',
-                    value:'',
-                    nodes:[]
+                    text: 'Harry Potter I',
+                    value: '',
+                    nodes: []
                 },
                 {
-                    text:'红楼梦',
-                    value:''
+                    text: 'Harry Potter ',
+                    value: ''
+                },
+                {
+                    text: '古典',
+                    value: '',
+                    nodes: [
+                        {
+                            text: '三国演义',
+                            value: '',
+                            nodes: []
+                        },
+                        {
+                            text: '红楼梦',
+                            value: ''
+                        }
+                    ]
                 }
-                ]
-            }
             ]
         },
         {
-            text:'Music',
-            value:'',
-            nodes:[
-            {
-                text:'命运交响曲',
-                value:'',
-                nodes:[]
-            },
-            {
-                text:'Classic',
-                value:'',
-                nodes:[
+            text: 'Music',
+            value: '',
+            nodes: [
                 {
-                    text:'The Beatles',
-                    value:'The Beatles',
-                    expanded: false,
-                    nodes:[
-                    {
-                        text:'Yesterday',
-                        value:'Yesterday',
-                        nodes:[]
-                    },
-                    {
-                        text:'Hey Jude',
-                        value:'Hey Jude',
-                        nodes:[]
-                    }
+                    text: '命运交响曲',
+                    value: '',
+                    nodes: []
+                },
+                {
+                    text: 'Classic',
+                    value: '',
+                    nodes: [
+                        {
+                            text: 'The Beatles',
+                            value: 'The Beatles',
+                            expanded: false,
+                            nodes: [
+                                {
+                                    text: 'Yesterday',
+                                    value: 'Yesterday',
+                                    nodes: []
+                                },
+                                {
+                                    text: 'Hey Jude',
+                                    value: 'Hey Jude',
+                                    nodes: []
+                                }
+                            ]
+                        },
+                        {
+                            text: 'Can\'t take my eyes off you!',
+                            value: 'Can\'t take my eyes off you!',
+                            nodes: []
+                        }
                     ]
                 },
                 {
-                    text:'Can\'t take my eyes off you!',
-                    value:'Can\'t take my eyes off you!',
-                    nodes:[]
+                    text: 'Rock & Roll',
+                    value: '',
+                    needPostBack: true,
+                    nodes: []
                 }
-                ]
-            },
-            {
-                text:'Rock & Roll',
-                value:'',
-                needPostBack: true,
-                nodes:[]
-            }
             ]
         },
         {
-            text:'Apple watch (Edition)',
-            value:'apple_watch'
+            text: 'Apple watch (Edition)',
+            value: 'apple_watch'
         }
     ];
 
     React.render(
-      <Tree nodes={nodes}>
-      </Tree>,
-      document.body
+            <Tree nodes={nodes}>
+            </Tree>,
+            document.body
     );
 
-    </script>
-  </body>
+</script>
+</body>
 </html>

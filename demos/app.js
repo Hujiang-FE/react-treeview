@@ -1,9 +1,9 @@
-import Tree from './treeview';
-import TreeNode from './treenode';
-require('./react-treeview.css');
 
-let nodes = [];
-const NUM = 50;
+
+var Tree = ReactTree.Tree;
+var TreeNode = ReactTree.TreeNode;
+var nodes = [];
+var NUM = 50;
 
 for (var i = 0; i < NUM; i++) {
     var l1node = {

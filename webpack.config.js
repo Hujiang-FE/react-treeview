@@ -7,12 +7,13 @@ var conditionalCompile = new webpack.DefinePlugin({
 
 module.exports = {
     entry: {
-        treeview: "./src/entry.js",
-        app: "./src/app.js"
+        treeview: "./src/entry.js"
     }
     , output: {
         path: __dirname + "/dist",
-        filename: "[name].js"
+        filename: '[name].js',
+        library: 'ReactTree',
+        libraryTarget: 'umd'
     }
     , module: {
         loaders: [            

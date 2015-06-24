@@ -1,10 +1,6 @@
 import Tree from './treeview';
 import TreeNode from './treenode';
+require('./react-treeview.css');
 
-window.Tree = Tree;
-window.TreeNode = TreeNode;
-
-export default {
-    Tree: Tree,
-    TreeNode: TreeNode
-}
+exports.Tree = Tree;
+exports.TreeNode = TreeNode;

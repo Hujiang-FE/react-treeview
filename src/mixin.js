@@ -1,6 +1,6 @@
 import TreeNode from './treenode';
 
-var nodeCollectionMixin = {
+exports.nodeCollectionMixin = {
 
     renderChildren(treeProps, visibility){
         let self = this,
@@ -42,15 +42,10 @@ var nodeCollectionMixin = {
     }
 }
 
-var triggerEventMixin = {
+exports.triggerEventMixin = {
     _trigger: function (eventName, args) {
         if (this.props.treeProps[eventName]) {
             this.props.treeProps[eventName].call(this, args);
         }
     }
-}
-
-export default {
-    nodeCollectionMixin: nodeCollectionMixin,
-    triggerEventMixin: triggerEventMixin
 }
