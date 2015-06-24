@@ -1,8 +1,8 @@
 {
-  "name": "react-webpack",
-  "version": "1.0.0",
+  "name": "react-treeview",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "entry.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
