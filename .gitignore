@@ -1,16 +1,11 @@
-*.obj
-*.dll
-*.pdb
-*.suo
-*.user
 [Bb]in/
 [Dd]ebug*/
 [Rr]elease*/
 node_modules*/
 packages*/
-hui.widgets/Gruntfile.js
 .sass-cache/
 .idea/*
 .ftppass
+dist/
 _temp/
 react_reference/

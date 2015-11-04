@@ -1,9 +1,10 @@
 {
   "name": "react-treeview",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An implement of treeview component with react.js",
   "main": "entry.js",
   "scripts": {
+    "build": "webpack",
     "watch": "webpack --watch"
   },
   "author": "Daniel.He",

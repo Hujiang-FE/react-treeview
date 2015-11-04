@@ -8,7 +8,7 @@ var conditionalCompile = new webpack.DefinePlugin({
 
 module.exports = {
     entry: {
-        treeview: "./src/entry.js"
+        treeview: "./src"
     }
     , output: {
         path: __dirname + "/dist",
@@ -25,7 +25,10 @@ module.exports = {
                     //blacklist:["strict"]
                 }
             }
-            ,{ test: /\.css$/, loader: "style!css" }
+            ,{ 
+                test: /\.css$/, 
+                loader: "style!css" 
+            }
             // ,{
             //     test: /\.css$/,
             //     loader: ExtractTextPlugin.extract("style-loader","css-loader")

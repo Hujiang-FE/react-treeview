@@ -3,9 +3,10 @@
 An implement of treeview component with react.js
 
 
-## Feature
+## Snapshot
+![snapshot](http://7xlsqt.com1.z0.glb.clouddn.com/treeview.png)
 
-* support ie8,ie8+,chrome,firefox,safari
+* support ie8+,chrome,firefox,safari
 
 
 ## Example
